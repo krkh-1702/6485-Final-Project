@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
+
+    <!-- Adding Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- Adding Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="static/styles/styles.css" />
+    <meta charset="utf-8" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+  </head>
+
+  <body>
+    <center>
+      <main></main>
+      <script src="static/scripts/sketch.js"></script>
+
+      <div class="container">
+        <h1 class="large-text">Image Classification</h1>
+        <br /><br />
+        <label class="medium-text" for="pwd">Upload Your Image :</label>
+        <form
+          class="form-horizontal text-center"
+          action="/submit3"
+          method="post"
+        >
+          <div class="form-group">
+            <div class="col">
+              {%if result == "Texture01"%}
+              <input
+                type="radio"
+                name="Texture"
+                id="Texture01"
+                value="Texture01"
+                checked
+              />
+              {% else %}
+              <input
+                type="radio"
+                name="Texture"
+                id="Texture01"
+                value="Texture01"
+              />
+              {% endif %}
+
+              <img src="../static/assets/Texture01.png" alt="" srcset="" />
+              <br />
+              <br />
+              {%if result == "Texture02"%}
+              <input
+                type="radio"
+                name="Texture"
+                id="Texture02"
+                value="Texture02"
+                checked
+              />
+              {% else %}
+              <input
+                type="radio"
+                name="Texture"
+                id="Texture02"
+                value="Texture02"
+              />
+              {% endif %}
+
+              <img src="../static/assets/Texture02.png" alt="" srcset="" />
+              <br />
+              <br />
+              {%if result == "Texture03"%}
+              <input
+                type="radio"
+                name="Texture"
+                id="Texture03"
+                value="Texture03"
+                checked
+              />
+              {% else %}
+              <input
+                type="radio"
+                name="Texture"
+                id="Texture03"
+                value="Texture03"
+              />
+              {% endif %}
+
+              <img src="../static/assets/Texture03.png" alt="" srcset="" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        {%if prediction%}
+        <h3>Details:</h3>
+
+        Texture: {{prediction}} {%endif%}
+        <br />
+        <br />
+      </div>
+    </center>
+    <br />
+    <br />
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SCI 6485 Final Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Adding Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- Adding Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <!-- <link href="../static/styles/index.css" rel="stylesheet" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+  </head>
+
+  <body>
+    <h1 class="small-text" style="padding-top: 50px">
+      Harvard GSD | SCI 6485 | Spring 2022
+    </h1>
+    <br />
+    <h1 class="small-text">Gabriel | Harshika | Kritika</h1>
+    <br />
+    <br />
+    <h1 class="large-text">Understanding Materials</h1>
+    <h2 class="medium-text">Visual aesthetics vs environmental impacts</h2>
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <div class="container">
+        <h1 class="large-text">Image Classification</h1>
+        <br /><br />
+        <label class="medium-text" for="pwd">Upload Your Image :</label>
+        <form
+          class="form-horizontal text-center"
+          action="/submit"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <div class="col">
+              <input
+                type="file"
+                class="form-control"
+                placeholder="Hours Studied"
+                name="my_image"
+                id="pwd"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        {%if val%}
+        <img src="{{img_path}}" alt="" srcset="" width="600px" />
+
+        <h3>Details:</h3>
+
+        Name: {{ val['name'] }}
+        <br />
+
+        EC factor: {{ val['embodied_carbon_factor in kgCO2e/kg'] }}
+        <br />
+
+        Embodied energy: {{ val['embodied_energy'] }} {% endif %}
+      </div>
+    </center>
+    <br />
+    <br />
+  </body>
+</html>

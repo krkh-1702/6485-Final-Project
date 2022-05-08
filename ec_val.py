@@ -1,0 +1,23 @@
+# material = {'Marble': {'name': 'marble', 'embodied_carbon_factor in kgCO2e/kg': '0.116', 'embodied_energy': '2'}, 
+#             'Stone': {'name': 'stone', 'embodied_carbon_factor in kgCO2e/kg': '0.0147', 'embodied_energy': '0.35'},
+#             'Wood': {'name': 'wood', 'embodied_carbon_factor in kgCO2e/kg': '0.72', 'embodied_energy': '10'},
+#             'Mud': {'name': 'mud', 'embodied_carbon_factor in kgCO2e/kg': '0.023','embodied_energy': '0.45'},
+#             'Brick': {'name': 'brick', 'embodied_carbon_factor in kgCO2e/kg': '0.24','embodied_energy': '3'},
+#             'Concrete': {'name': 'concrete', 'embodied_carbon_factor in kgCO2e/kg': '0.159','embodied_energy': '1.11'},
+#             'Formwork': {'name': 'formwork', 'embodied_carbon_factor in kgCO2e/kg': '1.07','embodied_energy': '15'},
+#             'Greenwall': {'name': 'greenwall', 'embodied_carbon_factor in kgCO2e/kg': '0.564','embodied_energy': '0.35'},
+#             'Asphalt': {'name': 'asphalt', 'embodied_carbon_factor in kgCO2e/kg': '0.43','embodied_energy': '51'},
+#             'Glass': {'name': 'glass', 'embodied_carbon_factor in kgCO2e/kg': '0.85','embodied_energy': '15'},
+#             'Metal': {'name': 'metal', 'embodied_carbon_factor in kgCO2e/kg': '8.24','embodied_energy': '155'}}
+
+material = {'Marble': {'name': 'marble', 'embodied_carbon_factor': '0.116', 'embodied_energy': '2'}, 
+            'Stone': {'name': 'stone', 'embodied_carbon_factor': '0.0147', 'embodied_energy': '0.35'},
+            'Wood': {'name': 'wood', 'embodied_carbon_factor': '0.72', 'embodied_energy': '10'},
+            'Mud': {'name': 'mud', 'embodied_carbon_factor': '0.023','embodied_energy': '0.45'},
+            'Brick': {'name': 'brick', 'embodied_carbon_factor': '0.24','embodied_energy': '3'},
+            'Concrete': {'name': 'concrete', 'embodied_carbon_factor': '0.159','embodied_energy': '1.11'},
+            'Formwork': {'name': 'formwork', 'embodied_carbon_factor': '1.07','embodied_energy': '15'},
+            'Greenwall': {'name': 'greenwall', 'embodied_carbon_factor': '0.564','embodied_energy': '0.35'},
+            'Asphalt': {'name': 'asphalt', 'embodied_carbon_factor': '0.43','embodied_energy': '51'},
+            'Glass': {'name': 'glass', 'embodied_carbon_factor': '0.85','embodied_energy': '15'},
+            'Metal': {'name': 'metal', 'embodied_carbon_factor': '8.24','embodied_energy': '155'}}
